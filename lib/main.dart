@@ -1,5 +1,6 @@
 import 'package:expense_app/transaction_list.dart';
 import 'package:flutter/material.dart';
+import 'login.dart'
 import 'transaction.dart';
 import 'new_transaction.dart';
 import 'transaction_list.dart';
@@ -11,14 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "Smart Khata",
+        title: "Expense Book",
         theme: ThemeData(
           
           primarySwatch: Colors.pink,
           fontFamily: 'PatrickHand',
           textTheme: ThemeData.light().textTheme.copyWith(
               title: TextStyle(
-                  color: Colors.pink[300],
+                  color: Colors.yellow[300],
                   fontFamily: 'PatrickHand',
                   fontWeight: FontWeight.bold,
                   fontSize: 22)),
@@ -81,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Smart Khata app"),
+        title: Text("Expense manager app"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
@@ -99,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: Icon(Icons.shopping_cart),
         onPressed: () => _startAddNewTransaction(context),
       ),
     );
